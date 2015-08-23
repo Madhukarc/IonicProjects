@@ -44,6 +44,7 @@ angular.module('starter.controllers', ['timer'])
            $scope.timerRunning = false;
            $scope.showPuzzle = true;
            $scope.reset();
+           $scope.solvecount = 0;
            $scope.startTimer();
        };
 
@@ -63,7 +64,7 @@ angular.module('starter.controllers', ['timer'])
            $scope.number1 = Math.floor((Math.random() * 10) + 1);
            $scope.number2 = Math.floor((Math.random() * 10) + 2);
            $scope.puzzleData.sumresult = "";
-           $scope.solvecount = 0;
+           
        };
 
        // triggered, when the timer stops, you can do something here, maybe show a visual indicator or vibrate the device
