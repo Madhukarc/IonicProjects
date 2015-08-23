@@ -1,0 +1,36 @@
+<ion-view view-title="Math Brainer" ng-init="startTimer()">
+    <ion-content class="padding">
+        <form>
+            <div class="list card">
+                <div class="item item-divider">Timer</div>
+                <div class="item item-body">
+                    <h1>{{counter}}</h1>
+                    <button ng-click="resetGame()">Reset Puzzle</button>
+                </div>
+            </div>
+            <div class="list card" ng-show="showPuzzle">
+                <div class="item item-divider">Sum</div>
+                <div class="item item-body">
+                    <div>
+                        {{number1}} + {{number2}} =
+                        <div>
+                            <input type="text" autofocus placeholder="" ng-model="puzzleData.sumresult" ng-change="validate()" ng-model-options="{validate: 'default blur', debounce: {default: 500, blur: 0} }">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item item-body">
+                <div  ng-if="result">
+                    Correct
+                </div>
+                <div  ng-if="!result" ng-show="showval">
+                    Oops!! Try Again.
+                </div>
+                <div  ng-if="timeout" ng-show="showval1">
+                    Your Score: {{solvecount}}
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
