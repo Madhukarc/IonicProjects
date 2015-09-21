@@ -4,6 +4,11 @@
     <ReferenceCachePath>C:\Users\Madhukar\AppData\Local\Temp\ChatApp_refcache</ReferenceCachePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Android'">
-    <DebuggerFlavor>RippleNexus</DebuggerFlavor>
+    <DebuggerFlavor>AndroidEmulator</DebuggerFlavor>
+    <AndroidEmulatorID>AndroidDevice;Device</AndroidEmulatorID>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Android'">
+    <DebuggerFlavor>AndroidEmulator</DebuggerFlavor>
+    <AndroidEmulatorID>AndroidDevice;Device</AndroidEmulatorID>
   </PropertyGroup>
 </Project>
